@@ -8,9 +8,9 @@
 			"architecture" : "x86"
 		}
 ,
-		"rect" : [ 8.0, 51.0, 968.0, 649.0 ],
+		"rect" : [ 8.0, 145.0, 320.0, 559.0 ],
 		"bglocked" : 0,
-		"openinpresentation" : 0,
+		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
 		"default_fontface" : 0,
 		"default_fontname" : "Arial",
@@ -32,6 +32,142 @@
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
 					"frgb" : 0.0,
+					"id" : "obj-48",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 663.5, 193.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 47.5, 81.0, 150.0, 20.0 ],
+					"text" : "Set Empatica Device ID"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-43",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 130.0, 614.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 47.5, 473.0, 150.0, 20.0 ],
+					"text" : "Enter FileName.txt to save"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-35",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 17.0, 692.0, 101.0, 18.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 47.5, 521.0, 103.0, 18.0 ],
+					"text" : "Save Data to File"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-28",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 130.0, 690.0, 83.0, 20.0 ],
+					"text" : "prepend write"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-27",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 130.0, 664.0, 61.0, 20.0 ],
+					"text" : "route text"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"annotation" : "FileName.txt",
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
+					"id" : "obj-23",
+					"maxclass" : "textedit",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "", "int", "", "" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 130.0, 639.0, 141.0, 19.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 47.5, 497.0, 141.0, 19.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-17",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 75.0, 752.0, 64.0, 20.0 ],
+					"text" : "append cr"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-16",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 17.0, 722.0, 141.0, 18.0 ],
+					"text" : "write bang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "bang", "int" ],
+					"patching_rect" : [ 50.0, 786.0, 46.0, 20.0 ],
+					"text" : "text"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"frgb" : 0.0,
 					"id" : "obj-13",
 					"linecount" : 2,
 					"maxclass" : "comment",
@@ -39,7 +175,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 17.0, 459.285706, 108.0, 34.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 81.0, 175.714279, 187.0, 20.0 ],
+					"presentation_rect" : [ 81.0, 161.714279, 187.0, 20.0 ],
 					"text" : "Check this to Read from Device"
 				}
 
@@ -71,7 +207,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 240.0, 269.0, 81.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 155.5, 56.85714, 68.0, 18.0 ]
+					"presentation_rect" : [ 155.5, 32.85714, 68.0, 18.0 ]
 				}
 
 			}
@@ -114,9 +250,9 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "", "int", "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 116.0, 269.0, 87.0, 18.0 ],
+					"patching_rect" : [ 116.0, 269.0, 97.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 56.85714, 103.0, 18.0 ]
+					"presentation_rect" : [ 47.5, 32.85714, 103.0, 18.0 ]
 				}
 
 			}
@@ -133,7 +269,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 528.0, 193.0, 109.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 151.714279, 109.0, 18.0 ]
+					"presentation_rect" : [ 47.5, 102.857147, 109.0, 18.0 ]
 				}
 
 			}
@@ -188,7 +324,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 685.0, 364.714294, 134.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 227.714279, 134.0, 20.0 ],
+					"presentation_rect" : [ 47.5, 203.714279, 134.0, 20.0 ],
 					"text" : "Subscribe to Sensors"
 				}
 
@@ -233,7 +369,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 893.0, 281.333344, 68.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 155.5, 76.85714, 68.0, 18.0 ],
+					"presentation_rect" : [ 155.5, 52.85714, 68.0, 18.0 ],
 					"text" : "Close TCP"
 				}
 
@@ -250,7 +386,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 685.0, 590.714294, 123.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 454.857147, 123.0, 18.0 ],
+					"presentation_rect" : [ 47.5, 419.857147, 123.0, 18.0 ],
 					"text" : "Disconnect Empatica"
 				}
 
@@ -266,7 +402,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 685.0, 561.857117, 134.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 400.0, 134.0, 18.0 ],
+					"presentation_rect" : [ 47.5, 376.0, 134.0, 18.0 ],
 					"text" : "Subscribe to Event Tag"
 				}
 
@@ -282,7 +418,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 685.0, 533.0, 174.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 371.142853, 174.0, 18.0 ],
+					"presentation_rect" : [ 47.5, 347.142853, 174.0, 18.0 ],
 					"text" : "Subscribe to Skin Temperature"
 				}
 
@@ -298,7 +434,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 685.0, 504.142853, 157.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 342.285706, 157.0, 18.0 ],
+					"presentation_rect" : [ 47.5, 318.285706, 157.0, 18.0 ],
 					"text" : "Subscribe to Accelerometer"
 				}
 
@@ -314,7 +450,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 685.0, 475.285706, 176.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 313.428558, 176.0, 18.0 ],
+					"presentation_rect" : [ 47.5, 289.428558, 176.0, 18.0 ],
 					"text" : "Subscribe to Inter-Beat Interval"
 				}
 
@@ -330,7 +466,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 685.0, 446.428589, 105.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 284.571442, 105.0, 18.0 ],
+					"presentation_rect" : [ 47.5, 260.571442, 105.0, 18.0 ],
 					"text" : "Subscribe to BVP"
 				}
 
@@ -346,7 +482,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 685.0, 417.571411, 107.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 255.714279, 107.0, 18.0 ],
+					"presentation_rect" : [ 47.5, 231.714279, 107.0, 18.0 ],
 					"text" : "Subscribe to GSR"
 				}
 
@@ -380,7 +516,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 332.0, 290.0, 67.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 76.85714, 103.0, 18.0 ],
+					"presentation_rect" : [ 47.5, 52.85714, 103.0, 18.0 ],
 					"text" : "Open TCP"
 				}
 
@@ -479,7 +615,7 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 37.0, 497.0, 20.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 50.5, 175.714279, 20.0, 20.0 ]
+					"presentation_rect" : [ 47.5, 161.714279, 20.0, 20.0 ]
 				}
 
 			}
@@ -676,7 +812,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 188.5, 824.0, 125.0, 20.0 ],
+					"patching_rect" : [ 188.5, 786.0, 125.0, 20.0 ],
 					"text" : "print serverResponse"
 				}
 
@@ -690,7 +826,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 170.25, 852.0, 153.5, 18.0 ],
+					"patching_rect" : [ 170.25, 818.0, 153.5, 18.0 ],
 					"text" : "\"R device_disconnect OK\""
 				}
 
@@ -722,7 +858,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 240.0, 242.0, 81.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 155.5, 34.85714, 68.0, 20.0 ],
+					"presentation_rect" : [ 155.5, 10.85714, 68.0, 20.0 ],
 					"text" : "Set Port"
 				}
 
@@ -738,7 +874,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 90.0, 242.0, 103.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 47.5, 34.85714, 103.0, 20.0 ],
+					"presentation_rect" : [ 47.5, 10.85714, 103.0, 20.0 ],
 					"text" : "Set IP Address"
 				}
 
@@ -900,6 +1036,26 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 26.5, 762.5, 59.5, 762.5 ],
+					"source" : [ "obj-16", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 84.5, 780.5, 59.5, 780.5 ],
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-29", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -929,6 +1085,16 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 314.5, 744.0, 84.5, 744.0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -941,7 +1107,7 @@
 					"destination" : [ "obj-88", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 314.5, 848.0, 314.25, 848.0 ],
+					"midpoints" : [ 314.5, 799.0, 314.25, 799.0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -978,6 +1144,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -1002,6 +1177,25 @@
 					"hidden" : 0,
 					"midpoints" : [ 902.5, 698.428589, 314.5, 698.428589 ],
 					"source" : [ "obj-26", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-28", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-27", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 139.5, 715.5, 148.5, 715.5 ],
+					"source" : [ "obj-28", 0 ]
 				}
 
 			}
@@ -1047,6 +1241,16 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-34", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"midpoints" : [ 26.5, 715.5, 26.5, 715.5 ],
+					"source" : [ "obj-35", 0 ]
 				}
 
 			}
