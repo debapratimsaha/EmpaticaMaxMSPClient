@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 152.0, 215.0, 315.0, 562.0 ],
+		"rect" : [ 156.0, 85.0, 296.0, 608.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,25 +38,57 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-19",
+					"id" : "obj-33",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 329.0, 846.0, 161.0, 22.0 ],
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 305.0, 830.0, 73.0, 22.0 ],
 					"style" : "",
-					"text" : "SendEmpaticaSignalsToEiM"
+					"text" : "fromsymbol"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-116",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-45",
+					"maxclass" : "comment",
+					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 171.0, 105.0, 105.0, 22.0 ],
+					"patching_rect" : [ 475.5, 841.0, 376.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 76.0, 581.0, 199.0, 20.0 ],
 					"style" : "",
-					"text" : "ftm.schedule.mxo"
+					"text" : "Show EiM Message Debug Output"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-36",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 447.0, 841.0, 24.0, 24.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 47.5, 588.0, 10.0, 10.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 305.0, 870.0, 161.0, 22.0 ],
+					"style" : "",
+					"text" : "SendEmpaticaSignalsToEiM"
 				}
 
 			}
@@ -360,7 +392,7 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 47.5, 32.85714, 104.0, 18.0 ],
 					"style" : "",
-					"text" : "172.31.75.251"
+					"text" : "172.31.87.139"
 				}
 
 			}
@@ -977,36 +1009,6 @@
 			}
 , 			{
 				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-89",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 188.5, 786.0, 125.0, 22.0 ],
-					"style" : "",
-					"text" : "print serverResponse"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontname" : "Arial",
-					"fontsize" : 12.0,
-					"id" : "obj-88",
-					"linecount" : 3,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 170.25, 818.0, 147.5, 50.0 ],
-					"style" : "",
-					"text" : "\"R device_subscribe gsr ERR You are not connected to any device\""
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"color" : [ 0.0, 1.0, 0.011765, 1.0 ],
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
@@ -1269,14 +1271,14 @@
 				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"midpoints" : [ 314.5, 744.0, 84.5, 744.0 ],
-					"order" : 4,
+					"order" : 2,
 					"source" : [ "obj-2", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
+					"destination" : [ "obj-33", 0 ],
 					"order" : 1,
 					"source" : [ "obj-2", 0 ]
 				}
@@ -1287,24 +1289,6 @@
 					"destination" : [ "obj-5", 0 ],
 					"order" : 1,
 					"source" : [ "obj-2", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-88", 1 ],
-					"midpoints" : [ 314.5, 799.0, 308.25, 799.0 ],
-					"order" : 2,
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-89", 0 ],
-					"midpoints" : [ 314.5, 742.5, 198.0, 742.5 ],
-					"order" : 3,
-					"source" : [ "obj-2", 0 ]
 				}
 
 			}
@@ -1406,6 +1390,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"source" : [ "obj-33", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-105", 0 ],
 					"source" : [ "obj-34", 0 ]
 				}
@@ -1416,6 +1407,13 @@
 					"destination" : [ "obj-16", 0 ],
 					"midpoints" : [ 26.5, 715.5, 26.5, 715.5 ],
 					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-19", 1 ],
+					"source" : [ "obj-36", 0 ]
 				}
 
 			}
@@ -1666,7 +1664,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "SendEmpaticaSignalsToEiM.maxpat",
-				"bootpath" : "~/Research/EmpaticaMaxMSPClient",
+				"bootpath" : "~/Desktop/EiM2017/EmpaticaMaxMSPClient",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

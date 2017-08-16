@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 138.0, 91.0, 398.0, 556.0 ],
+		"rect" : [ 243.0, 108.0, 398.0, 556.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,13 +39,38 @@
 		"boxes" : [ 			{
 				"box" : 				{
 					"bubble" : 1,
+					"id" : "obj-7",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 257.0, 400.0, 95.0, 24.0 ],
+					"style" : "",
+					"text" : "Debug"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 231.0, 400.0, 24.0, 24.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
 					"bubbleside" : 2,
 					"id" : "obj-5",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 206.5, 257.0, 95.0, 39.0 ],
-					"presentation_rect" : [ 178.0, 202.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "Enable looping"
 				}
@@ -69,7 +94,7 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 1,
+					"numinlets" : 2,
 					"numoutlets" : 0,
 					"patching_rect" : [ 89.0, 455.0, 161.0, 22.0 ],
 					"style" : "",
@@ -3803,17 +3828,24 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 1 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
  ],
 		"dependency_cache" : [ 			{
 				"name" : "SplitEmpaticaSignal.maxpat",
-				"bootpath" : "~/Research/EmpaticaMaxMSPClient",
+				"bootpath" : "~/Desktop/EiM2017/EmpaticaMaxMSPClient",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "SendEmpaticaSignalsToEiM.maxpat",
-				"bootpath" : "~/Research/EmpaticaMaxMSPClient",
+				"bootpath" : "~/Desktop/EiM2017/EmpaticaMaxMSPClient",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
