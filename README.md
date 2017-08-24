@@ -3,14 +3,15 @@ Empatica BLE Client for MaxMSP
 
 This Max Patch provides GUI to communicate with the Empatica Windows BLE Server, whose working is described in [http://developer.empatica.com/windows-ble-server.html].
 
+### User Interface
 The user interface is simple and looks like this:
 
 <img src="EmpaticaMaxClientScreenShot.PNG" height="400">
 
-Dependencies: 
+### Dependencies: 
 * Needs TCPClient available at https://cycling74.com/toolbox/tcpclient/ [Follow the instructions on their page to install]
 
-Usage:
+### Usage:
 * Open Patch by running ICATEmpaticaMaxMSPClient.maxpat
 * Enter the IP:Port of the machine where Windows BLE server is running.
 * Enter the device ID for Empatica Device you wish to connect to [can be seen from the Windows BLE Server].
